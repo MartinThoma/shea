@@ -1,0 +1,47 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pyl"
+version = "0.1.0"
+description = "A simple Python directory lister with optional tree view"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [ { name = "Martin Thoma", email = "info@martin-thoma.de" } ]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/MartinThoma/pyl"
+
+[project.scripts]
+pyl = "pyl.main:main"
+
+[tool.ruff]
+# Python version and general formatting parameters
+target-version = "py38"
+line-length = 100
+src = ["pyl", "tests"]
+exclude = [
+  ".venv",
+  "build",
+  "dist",
+  ".git",
+  "__pycache__",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D211",  # one-blank-line-before-class
+    "D212",  # multi-line-summary-first-line
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "ANN001", "D100"]
+"main.py" = ["T201"]
