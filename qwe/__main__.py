@@ -1,4 +1,4 @@
-"""Module entry point for `python -m pyl`."""
+"""Module entry point for `python -m qwe`."""
 
 from __future__ import annotations
 

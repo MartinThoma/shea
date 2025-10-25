@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "pyl"
+name = "qwe"
 version = "0.1.0"
 description = "A simple Python directory lister with optional tree view"
 readme = "README.md"
@@ -14,19 +14,18 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
-license = { file = "LICENSE" }
 
 [project.urls]
-Homepage = "https://github.com/MartinThoma/pyl"
+Homepage = "https://github.com/MartinThoma/qwe"
 
 [project.scripts]
-pyl = "pyl.main:main"
+qwe = "qwe.main:main"
 
 [tool.ruff]
 # Python version and general formatting parameters
 target-version = "py38"
 line-length = 100
-src = ["pyl", "tests"]
+src = ["qwe", "tests"]
 exclude = [
   ".venv",
   "build",

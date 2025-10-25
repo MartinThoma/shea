@@ -1,4 +1,4 @@
-# pyl
+# qwe
 
 A simple Python directory lister with an optional tree view, similar to ls and tree.
 
@@ -22,19 +22,19 @@ flit install
 List current directory (folders first, then files):
 
 ```bash
-pyl
+qwe
 ```
 
 Tree view:
 
 ```bash
-pyl -t
+qwe -t
 ```
 
 Specify a path and a maximum depth:
 
 ```bash
-pyl --tree --depth 2 ~/projects
+qwe --tree --depth 2 ~/projects
 ```
 
 ### Output examples
@@ -52,7 +52,7 @@ Tree view:
 ```
 .
 ├── src
-│   ├── pyl
+│   ├── qwe
 │   │   ├── __init__.py
 │   │   └── main.py
 │   └── pyproject.toml
