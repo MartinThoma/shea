@@ -1,6 +1,10 @@
 # shea
 
-A simple Python directory lister with an optional tree view, similar to ls and tree.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
+**Shea** (short for "**she**ll **a**pps") is a simple Python directory lister with an optional tree view. Currently supports `ls` and `tree` functionality with colorful emoji icons.
 
 ## Installation
 
@@ -84,19 +88,15 @@ $ pyls -t
 └── 📄 README.md
 ```
 
-## Python compatibility
-
-Python 3.8+
-
 ## License
 
 MIT
 
-## Pre-commit (Ruff)
+## Development
 
-This repo includes a pre-commit configuration to run Ruff for linting and formatting.
+This project uses [pre-commit](https://pre-commit.com/) with [Ruff](https://github.com/astral-sh/ruff) for linting and formatting.
 
-Install and enable it:
+To set up pre-commit hooks:
 
 ```bash
 python -m pip install pre-commit
