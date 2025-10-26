@@ -7,7 +7,7 @@ name = "shea"
 dynamic = ["version"]
 description = "A simple Python directory lister with optional tree view"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 authors = [ { name = "Martin Thoma", email = "info@martin-thoma.de" } ]
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -23,7 +23,7 @@ pyls = "shea.pyls:main"
 
 [tool.ruff]
 # Python version and general formatting parameters
-target-version = "py38"
+target-version = "py39"
 line-length = 100
 src = ["shea", "tests"]
 exclude = [
