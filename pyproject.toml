@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "shea"
-version = "0.1.0"
+dynamic = ["version"]
 description = "A simple Python directory lister with optional tree view"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -19,7 +19,7 @@ classifiers = [
 Homepage = "https://github.com/MartinThoma/shea"
 
 [project.scripts]
-shea = "shea.main:main"
+pyls = "shea.pyls:main"
 
 [tool.ruff]
 # Python version and general formatting parameters
@@ -43,4 +43,4 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "ANN001", "D100"]
-"main.py" = ["T201"]
+"pyls.py" = ["T201"]

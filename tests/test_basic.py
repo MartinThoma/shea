@@ -1,5 +1,5 @@
 import pytest
-from shea.main import main
+from shea.pyls import main
 
 
 def test_main_runs(tmp_path, capsys) -> None:
