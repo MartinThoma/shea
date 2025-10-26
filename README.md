@@ -4,7 +4,9 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
-**Shea** (short for "**she**ll **a**pps") is a simple Python directory lister with an optional tree view. Currently supports `ls` and `tree` functionality with colorful emoji icons.
+**Shea** (short for "**she**ll **a**pps") is a collection of modern Python-based shell utilities with colorful emoji icons. Currently includes:
+- **`pyls`** - Directory listing with tree view (ls/tree replacement)
+- **`pytop`** - Process viewer sorted by CPU/memory usage (top/htop alternative)
 
 ## Installation
 
@@ -23,6 +25,8 @@ flit install
 
 ## Usage
 
+### Directory Listing (pyls)
+
 List current directory (folders first, then files):
 
 ```bash
@@ -40,6 +44,28 @@ Specify a path and a maximum depth:
 ```bash
 shea --tree --depth 2 ~/projects
 ```
+
+### Process Viewer (pytop)
+
+Launch the interactive process monitor:
+
+```bash
+pytop
+```
+
+Features:
+- 🔥 Real-time CPU usage per core with visual bars
+- 💾 Memory and swap usage with color-coded horizontal charts
+- ⚙️ System information (uptime, process count)
+- 📊 Process table showing top 50 processes by CPU usage
+- 🔄 Click column headers to sort (CPU/MEM/TIME always descending, others toggle)
+- Interactive TUI interface with live updates
+
+Controls:
+- `q` - Quit
+- `r` - Force refresh
+- Arrow keys - Navigate process list
+- Click column headers - Sort by that column
 
 ### Output examples
 

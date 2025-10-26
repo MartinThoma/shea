@@ -9,6 +9,10 @@ description = "A simple Python directory lister with optional tree view"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [ { name = "Martin Thoma", email = "info@martin-thoma.de" } ]
+dependencies = [
+  "psutil>=5.9.0",
+  "textual>=0.41.0",
+]
 classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: MIT License",
@@ -20,6 +24,7 @@ Homepage = "https://github.com/MartinThoma/shea"
 
 [project.scripts]
 pyls = "shea.pyls:main"
+pytop = "shea.pytop:main"
 
 [tool.ruff]
 # Python version and general formatting parameters
@@ -39,8 +44,10 @@ select = ["ALL"]
 ignore = [
     "D211",  # one-blank-line-before-class
     "D212",  # multi-line-summary-first-line
+    "D203",
 ]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "ANN001", "D100"]
 "pyls.py" = ["T201"]
+"pytop.py" = ["T201"]
