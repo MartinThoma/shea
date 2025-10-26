@@ -42,21 +42,46 @@ shea --tree --depth 2 ~/projects
 Listing:
 
 ```
-📁 src
-📄 README.md
+$ pyls
+📁 dist
+📁 shea
+📁 tests
 📄 pyproject.toml
+📄 README.md
+
 ```
 
 Tree view:
 
 ```
+$ pyls -t
 .
-├── src
-│   ├── shea
-│   │   ├── __init__.py
-│   │   └── main.py
-│   └── pyproject.toml
-└── README.md
+├── 📁 dist
+│   ├── 📄 pyl-0.1.0-py3-none-any.whl
+│   ├── 📄 pyl-0.1.0.tar.gz
+│   ├── 📄 qwe-0.1.0-py3-none-any.whl
+│   ├── 📄 qwe-0.1.0.tar.gz
+│   ├── 📄 shea-0.1.0-py3-none-any.whl
+│   ├── 📄 shea-0.1.0.tar.gz
+│   ├── 📄 shea-0.1.1-py3-none-any.whl
+│   └── 📄 shea-0.1.1.tar.gz
+├── 📁 shea
+│   ├── 📁 __pycache__
+│   │   ├── 📄 __init__.cpython-310.pyc
+│   │   ├── 📄 __main__.cpython-310.pyc
+│   │   ├── 📄 _version.cpython-310.pyc
+│   │   ├── 📄 main.cpython-310.pyc
+│   │   └── 📄 pyls.cpython-310.pyc
+│   ├── 📄 __init__.py
+│   ├── 📄 __main__.py
+│   ├── 📄 _version.py
+│   └── 📄 pyls.py
+├── 📁 tests
+│   ├── 📁 __pycache__
+│   │   └── 📄 test_basic.cpython-310-pytest-8.3.2.pyc
+│   └── 📄 test_basic.py
+├── 📄 pyproject.toml
+└── 📄 README.md
 ```
 
 ## Python compatibility
