@@ -1,5 +1,5 @@
 import pytest
-from qwe.main import main
+from shea.main import main
 
 
 def test_main_runs(tmp_path, capsys) -> None:
@@ -27,4 +27,4 @@ def test_version_flag(capsys) -> None:
         main(["--version"])  # argparse's version action prints and exits with code 0
     assert e.value.code == 0
     out = capsys.readouterr().out
-    assert out.strip().startswith("qwe ")
+    assert out.strip().startswith("shea ")

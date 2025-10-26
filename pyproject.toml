@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "qwe"
+name = "shea"
 version = "0.1.0"
 description = "A simple Python directory lister with optional tree view"
 readme = "README.md"
@@ -16,16 +16,16 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/MartinThoma/qwe"
+Homepage = "https://github.com/MartinThoma/shea"
 
 [project.scripts]
-qwe = "qwe.main:main"
+shea = "shea.main:main"
 
 [tool.ruff]
 # Python version and general formatting parameters
 target-version = "py38"
 line-length = 100
-src = ["qwe", "tests"]
+src = ["shea", "tests"]
 exclude = [
   ".venv",
   "build",

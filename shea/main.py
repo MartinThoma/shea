@@ -1,12 +1,12 @@
 """
-CLI entrypoint for qwe.
+CLI entrypoint for shea.
 
 Provides directory listing similar to `ls`, and an optional tree view similar to `tree`.
 
 Usage examples:
-    qwe
-    qwe -t
-    qwe --tree --depth 2 ~/projects
+    shea
+    shea -t
+    shea --tree --depth 2 ~/projects
 """
 
 from __future__ import annotations
@@ -42,7 +42,7 @@ def _iter_entries(path: str, *, show_all: bool) -> list[os.DirEntry]:
         with os.scandir(path) as it:
             entries = [e for e in it if show_all or not _is_hidden(e.name)]
     except PermissionError:
-        print(f"qwe: permission denied: {path}", file=sys.stderr)
+        print(f"shea: permission denied: {path}", file=sys.stderr)
         return []
     # Directories first, then files; case-insensitive by name
     entries.sort(key=lambda e: (not e.is_dir(follow_symlinks=False), e.name.lower()))
@@ -63,7 +63,7 @@ def print_listing(path: str, *, show_all: bool = False) -> None:
     elif Path(path).is_file():
         print(f"{ICON_FILE} {Path(path).name}")
     else:
-        print(f"qwe: no such file or directory: {path}", file=sys.stderr)
+        print(f"shea: no such file or directory: {path}", file=sys.stderr)
 
 
 def print_tree(path: str, *, show_all: bool = False, max_depth: int | None = None) -> None:
@@ -80,7 +80,7 @@ def print_tree(path: str, *, show_all: bool = False, max_depth: int | None = Non
         return
 
     if not Path(path).is_dir():
-        print(f"qwe: no such file or directory: {path}", file=sys.stderr)
+        print(f"shea: no such file or directory: {path}", file=sys.stderr)
         return
 
     # Print the root
@@ -107,16 +107,16 @@ def print_tree(path: str, *, show_all: bool = False, max_depth: int | None = Non
 
 
 def build_parser() -> argparse.ArgumentParser:
-    """Create and return the argument parser for the qwe CLI."""
+    """Create and return the argument parser for the shea CLI."""
     parser = argparse.ArgumentParser(
-        prog="qwe",
+        prog="shea",
         description="List directory contents with optional tree view.",
     )
     parser.add_argument(
         "-V",
         "--version",
         action="version",
-        version=f"qwe {__version__}",
+        version=f"shea {__version__}",
         help="Show version and exit",
     )
     parser.add_argument(
@@ -155,7 +155,7 @@ def main(argv: list[str] | None = None) -> int:
     path = Path(args.path).expanduser()
     # Validate depth
     if args.depth is not None and args.depth < 0:
-        print("qwe: depth must be >= 0", file=sys.stderr)
+        print("shea: depth must be >= 0", file=sys.stderr)
         return 2
 
     try:

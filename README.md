@@ -1,4 +1,4 @@
-# qwe
+# shea
 
 A simple Python directory lister with an optional tree view, similar to ls and tree.
 
@@ -22,19 +22,19 @@ flit install
 List current directory (folders first, then files):
 
 ```bash
-qwe
+shea
 ```
 
 Tree view:
 
 ```bash
-qwe -t
+shea -t
 ```
 
 Specify a path and a maximum depth:
 
 ```bash
-qwe --tree --depth 2 ~/projects
+shea --tree --depth 2 ~/projects
 ```
 
 ### Output examples
@@ -52,7 +52,7 @@ Tree view:
 ```
 .
 ├── src
-│   ├── qwe
+│   ├── shea
 │   │   ├── __init__.py
 │   │   └── main.py
 │   └── pyproject.toml

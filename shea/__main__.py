@@ -1,4 +1,4 @@
-"""Module entry point for `python -m qwe`."""
+"""Module entry point for `python -m shea`."""
 
 from __future__ import annotations
 
