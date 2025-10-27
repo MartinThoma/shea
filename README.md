@@ -7,6 +7,7 @@
 **Shea** (short for "**she**ll **a**pps") is a collection of modern Python-based shell utilities with colorful emoji icons. Currently includes:
 - **`pyls`** - Directory listing with tree view (ls/tree replacement)
 - **`pytop`** - Process viewer sorted by CPU/memory usage (top/htop alternative)
+- **`pydisk`** - Disk usage viewer with interactive directory explorer (df/ncdu alternative)
 
 ## Installation
 
@@ -66,6 +67,36 @@ Controls:
 - `r` - Force refresh
 - Arrow keys - Navigate process list
 - Click column headers - Sort by that column
+
+### Disk Usage Viewer (pydisk)
+
+Show all disk partitions with usage information:
+
+```bash
+pydisk
+```
+
+Launch interactive directory explorer for a specific path:
+
+```bash
+pydisk /
+pydisk /home
+pydisk ~/projects
+```
+
+Features:
+- 💾 Disk usage table showing all partitions with visual bars
+- 📊 Color-coded usage percentages (green/cyan/yellow/red)
+- 🔍 Interactive TUI to explore directory sizes
+- 📁 Navigate directories to see which files/folders use the most space
+- ⚡ Recursively calculates folder sizes
+
+Interactive mode controls:
+- `q` - Quit
+- `r` - Refresh current directory
+- `u` or `Esc` - Go up one directory level
+- Click/Enter on a row - Enter directory or show file info
+- Arrow keys - Navigate file/folder list
 
 ### Output examples
 

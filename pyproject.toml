@@ -25,6 +25,7 @@ Homepage = "https://github.com/MartinThoma/shea"
 [project.scripts]
 pyls = "shea.pyls:main"
 pytop = "shea.pytop:main"
+pydisk = "shea.pydisk:main"
 
 [tool.ruff]
 # Python version and general formatting parameters
@@ -51,3 +52,4 @@ ignore = [
 "tests/*" = ["S101", "ANN001", "D100"]
 "pyls.py" = ["T201"]
 "pytop.py" = ["T201"]
+"pydisk.py" = ["T201"]
